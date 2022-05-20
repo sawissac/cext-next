@@ -1,0 +1,34 @@
+{
+  "name": "Extension Name",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["scripting", "storage","tabs","activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js":["PreLoader/..."],
+      "css":["Lib/..."]
+    }
+  ],
+  "action": {
+    "default_title": "noteup extenstion",
+    "default_icon": {
+      "16": "/img/...",
+      "32": "/img/...",
+      "48": "/img/...",
+      "128": "/img/..."
+    }
+  },
+  "icons": {
+    "16": "/img/...",
+    "32": "/img/...",
+    "48": "/img/...",
+    "128": "/img/..."
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}
