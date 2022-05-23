@@ -1,0 +1,48 @@
+{
+  "name": "CEXT Next",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["scripting", "storage", "tabs", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>", "https://*/*", "http://*/*"],
+      "run_at": "document_start",
+      "js": ["/preloader/js/cextbox.js", "/preloader/js/controller.js"],
+      "css": ["/preloader/css/style.css", "/preloader/css/controller.css"]
+    }
+  ],
+  "host_permissions": ["<all_urls>", "https://*/*", "http://*/*"],
+  "web_accessible_resources": [
+    {
+      "matches": ["<all_urls>", "https://*/*", "http://*/*"],
+      "resources": [
+        "/icon/arrow/angle-left.svg",
+        "/icon/arrow/plus.svg",
+        "img/icon-bing.png",
+        "img/icon-google.png",
+        "img/dot-background.png"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "noteup extenstion",
+    "default_icon": {
+      "16": "/icon/16w/icon.png",
+      "32": "/icon/32w/icon.png",
+      "48": "/icon/48w/icon.png",
+      "128": "/icon/128w/icon.png"
+    }
+  },
+  "icons": {
+    "16": "/icon/16w/icon.png",
+    "32": "/icon/32w/icon.png",
+    "48": "/icon/48w/icon.png",
+    "128": "/icon/128w/icon.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}

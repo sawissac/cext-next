@@ -1,0 +1,92 @@
+.cext-box {
+  width: 340px;
+  z-index: 9999;
+  position: fixed;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.cext-box * {
+  box-sizing: border-box;
+}
+
+.cext-box > .inner-box {
+  font-family: "Poppins";
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0px 0px 3px 0px rgba(2, 2, 2, 0.2);
+  padding: 10px;
+  margin: 0;
+  overflow-y: scroll;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 50px 50px;
+}
+
+.cextbox-pos-left-expand {
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.cextbox-pos-right-expand {
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.cextbox-pos-left-top {
+  left: 0;
+  top: 0;
+  height: 50vh;
+}
+.cextbox-pos-right-top {
+  right: 0;
+  top: 0;
+  height: 50vh;
+}
+.cextbox-pos-left-bottom {
+  left: 0;
+  bottom: 0;
+  height: 50vh;
+}
+.cextbox-pos-right-bottom {
+  right: 0;
+  bottom: 0;
+  height: 50vh;
+}
+
+.cextbox-pos-center-top {
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0%);
+  height: 50vh;
+}
+.cextbox-pos-center-bottom {
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0%);
+  height: 50vh;
+}
+
+.cextbox-pos-center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 50vh;
+}
+
+.cext-box > .inner-box::-webkit-scrollbar {
+  width: 7px;
+  padding: 0px 5px;
+}
+.cext-box > .inner-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+.cext-box > .inner-box::-webkit-scrollbar-thumb {
+  background: rgb(40, 40, 40);
+  border-radius: 10px;
+}
+.cext-box > .inner-box::-webkit-scrollbar-thumb:hover {
+  background: rgb(5, 5, 5);
+}
